@@ -36,6 +36,12 @@
       top: 20%;
       left: 50%;
       transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all 1s ease-out;
+      &.show {
+        opacity: 1;
+        top: 20%;
+      }
       .title-wrap-content {
         align-items: center;
         display: flex;
@@ -97,6 +103,13 @@
     height: 1272px;
     .content {
       text-align: left;
+      opacity: 0;
+      transform: translate(0, 50px);
+      transition: all 1s;
+      &.show {
+        opacity: 1;
+        transform: translate(0, 0px);
+      }
     }
     .sec02-obj-1 {
       top: 0px;
@@ -138,6 +151,11 @@
   }
   .highlight {
     font-size: 40px;
+    opacity: 0;
+    transition: all 2s;
+    &.show {
+      opacity: 1;
+    }
     .highlight-p {
       display: block;
       font-size: 48px;
@@ -161,6 +179,13 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
+    opacity: 0;
+    transform: translate(0, 100px);
+    transition: all 1s;
+    &.show {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
   }
   .img-box {
     width: 120px;
@@ -355,6 +380,13 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
+    opacity: 0;
+    transform: translate(0, 100px);
+    transition: all 1s;
+    &.show {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
     .info-text {
       display: flex;
       flex-direction: column;
@@ -603,5 +635,35 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  .section01 .section-top .title-wrap .title-wrap-content .main-title {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .section01 .section-top .title-wrap .title-wrap-content .main-title {
+    font-size: 33px;
+  }
+  .section01 .section-top .title-wrap .title-wrap-content .button-wrap .button {
+    width: 140px;
+    justify-content: center;
+    font-size: 17px;
+    padding: 10px 12px;
+  }
+  .section01 .section-bottom .bottom-text {
+    font-size: 22px;
+    span {
+      display: block;
+    }
+  }
+  .object .object-img {
+    width: 240px;
+  }
+  .object .object-bg {
+    width: 240px;
   }
 }

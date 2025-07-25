@@ -28,6 +28,12 @@
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+.section01 .section-top .title-wrap.show {
+  opacity: 1;
+  top: 20%;
 }
 .section01 .section-top .title-wrap .title-wrap-content {
   align-items: center;
@@ -89,6 +95,13 @@
 }
 .section02 .content-wrapper .content {
   text-align: left;
+  opacity: 0;
+  transform: translate(0, 50px);
+  transition: all 1s;
+}
+.section02 .content-wrapper .content.show {
+  opacity: 1;
+  transform: translate(0, 0px);
 }
 .section02 .content-wrapper .sec02-obj-1 {
   top: 0px;
@@ -129,7 +142,12 @@
 }
 .section04 .highlight {
   font-size: 40px;
+  opacity: 0;
+  transition: all 2s;
   margin-bottom: 30px;
+}
+.section04 .highlight.show {
+  opacity: 1;
 }
 .section04 .highlight .highlight-p {
   display: block;
@@ -150,6 +168,13 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
+  opacity: 0;
+  transform: translate(0, 100px);
+  transition: all 1s;
+}
+.section05 .info-box.show {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 .section05 .img-box {
   width: 120px;
@@ -334,6 +359,13 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
+  opacity: 0;
+  transform: translate(0, 100px);
+  transition: all 1s;
+}
+.section10 .info-box.show {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 .section10 .info-box .info-text {
   display: flex;
@@ -567,4 +599,33 @@
   width: 24px;
   height: 24px;
   display: block;
+}
+
+@media (max-width: 1200px) {
+  .section01 .section-top .title-wrap .title-wrap-content .main-title {
+    font-size: 50px;
+  }
+}
+@media (max-width: 500px) {
+  .section01 .section-top .title-wrap .title-wrap-content .main-title {
+    font-size: 33px;
+  }
+  .section01 .section-top .title-wrap .title-wrap-content .button-wrap .button {
+    width: 140px;
+    justify-content: center;
+    font-size: 17px;
+    padding: 10px 12px;
+  }
+  .section01 .section-bottom .bottom-text {
+    font-size: 22px;
+  }
+  .section01 .section-bottom .bottom-text span {
+    display: block;
+  }
+  .object .object-img {
+    width: 240px;
+  }
+  .object .object-bg {
+    width: 240px;
+  }
 }/*# sourceMappingURL=style.css.map */
