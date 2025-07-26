@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
@@ -11,6 +11,41 @@
 </head>
 
 <body>
+  <nav class="p-navbar">
+    <div class="p-navbar__logo-container">
+      <img src="assets/images/toss_logo.png" style="width: 100px;" alt="">
+    </div>
+    <div class="p-navbar_content">
+      <ul class="p-navbar__menu">
+        <li class="p-navbar__item">
+          <a href="#">회사소개</a>
+        </li>
+        <li class="p-navbar__item">
+          <a href="#">공지사항</a>
+        </li>
+        <li class="p-navbar__item">
+          <a href="#">고객센터</a>
+        </li>
+        <li class="p-navbar__item">
+          <a href="#">자주 묻는 질문</a>
+        </li>
+        <li class="p-navbar__item">
+          <a href="#">토스인증서</a>
+        </li>
+        <li class="p-navbar__item">
+          <a href="#">채용</a>
+        </li>
+      </ul>
+    </div>
+    <div class="language">
+      <li class="language_item"><a>KOR</a></li>
+      <span class="divider b0b8c1">|</span>
+      <li class="language_item"><a class="b0b8c1">ENG</a></li>
+    </div>
+    </div>
+    </div>
+  </nav>
+
   <section class="section01">
     <div class="section-top">
       <div class="main-bg">
@@ -742,6 +777,7 @@
 
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
@@ -767,6 +803,22 @@
         end: "bottom top",
         scrub: true
       }
+    });
+
+    $(document).ready(function () {
+      $('.language_item').on('click', function () {
+        $('.language_item').each(function () {
+          const $a = $(this).find('a');
+
+          if (this === event.currentTarget) {
+            // 클릭한 항목: 클래스 제거
+            $a.removeClass('b0b8c1');
+          } else {
+            // 다른 항목: 클래스 추가
+            $a.addClass('b0b8c1');
+          }
+        });
+      });
     });
 
     const titleWrap = document.querySelector(".title-wrap");

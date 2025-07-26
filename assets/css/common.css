@@ -5,6 +5,10 @@ body {
   font-family: "Pretendard";
 }
 
+.b0b8c1 {
+  color: #b0b8c1 !important;
+}
+
 .grey01 {
   color: #8b95a1;
 }
@@ -33,6 +37,53 @@ img {
 
 .p-container-default {
   max-width: 1140px;
+}
+
+.p-container__inner {
+  display: flex;
+}
+
+.p-navbar {
+  display: flex;
+  width: 1000px;
+  height: 60px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.p-navbar .p-navbar_content .p-navbar__menu {
+  display: flex;
+  gap: 4px;
+}
+.p-navbar .p-navbar_content .p-navbar__menu .p-navbar__item {
+  font-size: 15px;
+  padding: 0 8px;
+}
+.p-navbar .p-navbar_content .p-navbar__menu .p-navbar__item a {
+  padding: 12px 10px;
+  font-size: 15px;
+  line-height: 20px;
+  color: #4e5968;
+  text-decoration: none;
+}
+.p-navbar .p-navbar_content .p-navbar__menu .p-navbar__item a:hover {
+  color: #0056b3;
+}
+.p-navbar .language {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.p-navbar .language .language_item {
+  padding: 12px 10px;
+}
+.p-navbar .language .language_item a {
+  padding: 12px 10px;
+  font-size: 15px;
+  line-height: 20px;
+  color: #4e5968;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .content {
