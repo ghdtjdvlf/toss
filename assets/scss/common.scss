@@ -1,5 +1,9 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
+:root {
+  .sec-padding: 80;
+}
+
 body {
   word-break: keep-all;
   overflow-x: hidden;
@@ -204,4 +208,60 @@ img {
   font-weight: 600;
   line-height: 1.5;
   color: rgb(107, 118, 132);
+}
+
+@media (max-width: 500px) {
+  .p-container {
+    width: 93%;
+  }
+  .object .object-img {
+    width: 226px;
+    left: 47%;
+  }
+
+  .object .object-bg {
+    width: 386px;
+    height: auto;
+    transform: translate(92px, 167px);
+  }
+
+  .content-tags {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .content-title {
+    font-size: 28px;
+    margin-bottom: 60px;
+  }
+
+  .info {
+    font-size: 17px;
+    text-align: left;
+  }
+
+  .section03 .infobox {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .section03 .infobox:nth-of-type(2) {
+    flex-direction: column-reverse;
+  }
+
+  .infobox-h2 svg {
+    width: 16px;
+  }
+
+  .infobox-h2 {
+    font-size: 15px;
+  }
+  .infobox-h3 {
+    font-size: 24px;
+  }
+  .infobox-p {
+    font-size: 15px;
+  }
+
+  .column-reverse {
+    flex-direction: column-reverse !important;
+  }
 }

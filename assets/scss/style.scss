@@ -84,7 +84,7 @@
     }
   }
   .section-bottom {
-    padding: 200px 0;
+    padding: 200px 40px;
     .bottom-text {
       font-size: 32px;
       font-weight: 700;
@@ -326,8 +326,10 @@
 
 .section09 {
   padding: 250px 0;
+
   .content-wrapper {
     height: 1272px;
+    position: relative;
     .info {
       position: absolute;
     }
@@ -656,14 +658,128 @@
   }
   .section01 .section-bottom .bottom-text {
     font-size: 22px;
+    white-space: normal;
     span {
       display: block;
     }
   }
-  .object .object-img {
-    width: 240px;
+
+  .section02 .content-wrapper .sec02-obj-1 {
+    top: -40px;
+    right: -310px;
   }
-  .object .object-bg {
-    width: 240px;
+  .section02 .content-wrapper .sec02-obj-2 {
+    top: -40px;
+    left: -128px;
+  }
+  .section02 .content-wrapper .sec02-info {
+    left: 0px;
+    bottom: 440px;
+  }
+  .section03 .infobox .info-img {
+    width: 400px;
+  }
+
+  .section03 .infobox {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section03 .infobox:nth-of-type(2) {
+    flex-direction: column-reverse !important;
+  }
+
+  .section04 .sec04-obj-1 {
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .section04 .highlight {
+    margin-top: 600px;
+  }
+  .section04 .highlight .highlight-p {
+    font-size: 28px;
+  }
+
+  .section05 .info-box {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .section05 .img-box {
+    width: 80px;
+  }
+
+  .section06 p {
+    position: static;
+  }
+  .section06 .sec06-obj-1 {
+    top: 34%;
+  }
+  .section06 .sec06-info-1 {
+    transform: translate(0, 0);
+    br {
+      display: none;
+    }
+  }
+  .section06 .sec06-info-2 {
+    transform: translate(0, 0);
+    br {
+      display: none;
+    }
+  }
+  .section06 .sec06-info-3 {
+    transform: translate(0, 622px);
+    text-align: center;
+    font-size: 20px;
+    color: #4e5968;
+  }
+
+  .section07 .center-text {
+    font-size: 30px;
+  }
+
+  .section08 .content-title-60 {
+    font-size: 36px;
+    margin-bottom: 60px;
+  }
+
+  .sec08-insurance-2 {
+    display: none;
+  }
+  .section08 .sec08-insurance {
+    margin-bottom: 80px;
+  }
+  .section08 .sec08-manage .sec08-manage-textwrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .section09 {
+    height: 1613px;
+  }
+
+  .section09 .content-wrapper .sec09-obj-1 {
+    left: 50%;
+    top: 105%;
+    transform: translate(-50%, -50%);
+  }
+
+  .section09 .content-wrapper .sec09-obj-2 {
+    left: 50%;
+    top: 33%;
+    transform: translate(-50%, -50%);
+  }
+  .section09 .content-wrapper .sec09-info-1 {
+    position: static;
+    text-align: center;
+    br {
+      display: none;
+    }
+  }
+  .section09 .content-wrapper .sec09-info-2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    br {
+      display: none;
+    }
   }
 }
