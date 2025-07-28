@@ -31,40 +31,78 @@
 </head>
 
 <body>
-  <nav class="p-navbar">
-    <div class="p-navbar__logo-container">
-      <img src="assets/images/toss_logo.png" style="width: 100px;" alt="토스 로고">
-    </div>
-    <div class="p-navbar_content">
-      <ul class="p-navbar__menu">
-        <li class="p-navbar__item">
-          <a href="#">회사소개</a>
-        </li>
-        <li class="p-navbar__item">
-          <a href="#">공지사항</a>
-        </li>
-        <li class="p-navbar__item">
-          <a href="#">고객센터</a>
-        </li>
-        <li class="p-navbar__item">
-          <a href="#">자주 묻는 질문</a>
-        </li>
-        <li class="p-navbar__item">
-          <a href="#">토스인증서</a>
-        </li>
-        <li class="p-navbar__item">
-          <a href="#">채용</a>
-        </li>
-      </ul>
-    </div>
-    <div class="language">
-      <li class="language_item"><a>KOR</a></li>
-      <span class="divider b0b8c1">|</span>
-      <li class="language_item"><a class="b0b8c1">ENG</a></li>
-    </div>
-    </div>
-    </div>
-  </nav>
+  <header>
+    <nav class="p-navbar">
+      <div class="p-navbar__logo-container">
+        <img src="assets/images/toss_logo.png" style="width: 100px;" alt="토스 로고">
+      </div>
+      <div class="p-navbar_content">
+        <ul class="p-navbar__menu">
+          <li class="p-navbar__item">
+            <a href="#">회사소개</a>
+          </li>
+          <li class="p-navbar__item">
+            <a href="#">공지사항</a>
+          </li>
+          <li class="p-navbar__item">
+            <a href="#">고객센터</a>
+          </li>
+          <li class="p-navbar__item">
+            <a href="#">자주 묻는 질문</a>
+          </li>
+          <li class="p-navbar__item">
+            <a href="#">토스인증서</a>
+          </li>
+          <li class="p-navbar__item">
+            <a href="#">채용</a>
+          </li>
+        </ul>
+      </div>
+      <div class="language">
+        <li class="language_item"><a>KOR</a></li>
+        <span class="divider b0b8c1">|</span>
+        <li class="language_item"><a class="b0b8c1">ENG</a></li>
+      </div>
+      <div class="p-navbar__right-on-mobile">
+        <button class="p-button">
+          앱 다운로드
+        </button>
+        <button class="nav-toggle" aria-label="메뉴 열기">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        </button>
+      </div>
+
+
+    </nav>
+    <ul class="p-navbar__menu_mobile">
+      <li class="p-navbar__item">
+        <a href="#">회사소개</a>
+      </li>
+      <li class="p-navbar__item">
+        <a href="#">공지사항</a>
+      </li>
+      <li class="p-navbar__item">
+        <a href="#">고객센터</a>
+      </li>
+      <li class="p-navbar__item">
+        <a href="#">자주 묻는 질문</a>
+      </li>
+      <li class="p-navbar__item">
+        <a href="#">토스인증서</a>
+      </li>
+      <li class="p-navbar__item">
+        <a href="#">채용</a>
+      </li>
+      <div class="language">
+        <li class="language_item"><a>KOR</a></li>
+        <span class="divider b0b8c1">|</span>
+        <li class="language_item"><a class="b0b8c1">ENG</a></li>
+      </div>
+    </ul>
+  </header>
 
   <section class="section01">
     <div class="section-top">
@@ -832,19 +870,28 @@
       }
     });
 
+
+    // 네브바 언어 선택 색상변경
     $(document).ready(function () {
       $('.language_item').on('click', function () {
         $('.language_item').each(function () {
           const $a = $(this).find('a');
 
           if (this === event.currentTarget) {
-            // 클릭한 항목: 클래스 제거
             $a.removeClass('b0b8c1');
           } else {
-            // 다른 항목: 클래스 추가
             $a.addClass('b0b8c1');
           }
         });
+      });
+    });
+
+    // 모바일 네브바 토글 버튼
+    $(document).ready(function () {
+      $('.nav-toggle').on('click', function () {
+        $(this).toggleClass('open');
+        $('.mobile-menu').toggleClass('active');
+        $('.p-navbar__menu_mobile').toggleClass('active');
       });
     });
 
