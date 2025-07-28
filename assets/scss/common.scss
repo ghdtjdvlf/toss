@@ -151,6 +151,9 @@ header {
       }
     }
   }
+  .p-navbar__menu_mobile {
+    display: none;
+  }
 }
 
 .content {
@@ -272,6 +275,9 @@ header {
 }
 
 @media (max-width: 600px) {
+  header .p-navbar__menu_mobile {
+    display: flex;
+  }
   header .p-navbar {
     width: 100%;
     position: fixed;
@@ -288,7 +294,6 @@ header {
   header .p-navbar .p-navbar__right-on-mobile {
     display: flex;
   }
-
   .p-navbar__menu_mobile {
     position: fixed;
     z-index: 0;

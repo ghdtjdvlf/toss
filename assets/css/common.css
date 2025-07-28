@@ -146,6 +146,9 @@ header .p-navbar .p-navbar__right-on-mobile .nav-toggle.open .bar:nth-child(2) {
 header .p-navbar .p-navbar__right-on-mobile .nav-toggle.open .bar:nth-child(3) {
   transform: rotate(-45deg) translateY(-8px);
 }
+header .p-navbar__menu_mobile {
+  display: none;
+}
 
 .content {
   opacity: 0;
@@ -265,6 +268,9 @@ header .p-navbar .p-navbar__right-on-mobile .nav-toggle.open .bar:nth-child(3) {
 }
 
 @media (max-width: 600px) {
+  header .p-navbar__menu_mobile {
+    display: flex;
+  }
   header .p-navbar {
     width: 100%;
     position: fixed;
