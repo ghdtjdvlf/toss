@@ -2,7 +2,6 @@
 .section01 {
   position: relative;
   width: 100%;
-  overflow: hidden;
 }
 .section01 .section-top .main-bg {
   width: auto;
@@ -215,7 +214,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 .section07 .center-image {
   width: 100%;
